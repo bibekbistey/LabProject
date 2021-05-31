@@ -4,8 +4,7 @@
 
 
 Length=int(input("Enter the length of a right-angled traingle:"))
-Base=int(input("enter the base of a right-angled traingle:"))
 Height=int(input("enter the height of a right-angled trainglr:"))
-Area=Length*Base*Height
-print("three sides are:",Length,Base,Height)
+Area=Length*Height/2
+print("two sides are:",Length,Height)
 print(f"The area of right-angled traingle is {Area}")
