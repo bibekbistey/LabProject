@@ -1,34 +1,40 @@
-#Add- no parameter no return statement
-def add():
-    a=int(input("Enter first number:"))
-    b = int(input("Enter second number:"))
-    sum=a+b
-    print(f"The sum of {a} and {b} is {sum}")
-add()
+def add(*args):
+    sum=0
+    for i in args:
+        sum=sum+i
+    return sum
+def sub(x,y):
+    return x-y
+def mul(x,y):
+    return x*y
+def div(x,y):
+    return x/y
 
+print('This is my sample application')
+print('******************')
+print('program start:')
+while True:
+    print('Menu:\n1. add\n2. sub\n3. mul\n4. div')
+    option=int(input('Choose your option:'))
+    print('*******************')
+    first=float(input('Enter first value:'))
+    second=float(input('Enter second value:'))
+    if option==1:
+        answer=add(first,second)
+        print(f'The result is {answer}')
+    elif option==2:
+        answer=sub(first,second)
+        print(f'The result is {answer}')
+    elif option==3:
+        answer=mul(first,second)
+        print(f'The result is {answer}')
+    elif option==4:
+        answer=div(first,second)
+        print(f'The result is {answer}')
+    else:
+        print('please insert valid option')
 
-
-
-#Sub- parameter and no return statement
-def diff(c,d):
-    difference=c-d
-    print(f"The difference of {c} and {d} is {difference}")
-diff(10,5)
-
-
-#Mul- no-paramter and return statement
-def mul():
-    a = int(input("Enter first number:"))
-    b = int(input("Enter second number:"))
-    multiply=a*b
-    print(f"The multiplication of {a} and {b} is {multiply}")
-    return multiply
-ans=mul()
-
-
-#Div- parameter and return statement
-def div(a,b):
-    division=a/b
-    print(f"The division of {a} and {b} is {division}")
-    return division
-answer=div(10,2)
+    choice=input('Do you want to continue-(y/n)')
+    if choice=='n':
+        print('Thank you --')
+        break
